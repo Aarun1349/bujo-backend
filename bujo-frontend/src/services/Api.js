@@ -6,7 +6,7 @@
  * Login API Calls
  */
 
-// require("dotenv").config();
+require("dotenv").config();
 
 let headers = new Headers();
 
@@ -18,6 +18,7 @@ headers.append("Access-Control-Allow-Credentials", "true");
 
 const AUTH_BASE_URL =
   process.env.AUTH_BASE_URL || `http://localhost:8000/api/auth`;
+  // 'http://localhost:8000/api/auth/login'
 
 export const loginUser = async (body) => {
   console.log("Body params___", body);
